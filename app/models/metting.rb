@@ -75,7 +75,6 @@ class Metting
         flatten_metting(_)
      end
   end
-
   
   def flatten_metting(style)
     create_tracks

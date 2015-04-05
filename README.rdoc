@@ -1,0 +1,83 @@
+== README
+
+
+安装ruby 2.1.2p95  Rails 4.1.8
+
+bundle install 安装相关gemfile
+
+
+1、获取输入数据组装成类似：[[60, "Writing Fast Tests Against Enterprise Rails 60min"], [45, "Overdoing it in Python 45min"]]数组
+2、获取总时间@sum_time，比对每天可用时间，判断出要创建几个track。
+3、捆绑处理 ：2个45分钟+1个30分钟 = 2小时 ； 2个30分钟 = 1小时；60分钟也为1小时 组成 one_hour_array 队列。
+4、将所有track排版，先派AM再排PM
+5、合并AM+PM、输出tracks
+
+测试结果：
+rspec /Users/shuguo/conference_track_management/spec/models/track_spec.rb
+
+track1
+09:00AM Programming in the Boondocks of Seattle 30min
+09:30AM Ruby vs. Clojure for Back-End Development 30min
+10:00AM Overdoing it in Python 45min
+10:45AM Ruby Errors from Mismatched Gem Versions 45min
+11:30AM Lua for the Masses 30min
+12:00PM Lunch
+13:00PM Writing Fast Tests Against Enterprise Rails 60min
+14:00PM Communicating Over Distance 60min
+15:00PM Pair Programming vs Noise 45min
+15:45PM Clojure Ate Scala (on my project) 45min
+16:30PM Sit Down and Write 30min
+05:00PM Networking Event
+track2
+09:00AM A World Without HackerNews 30min
+09:30AM User Interface CSS in Rails Apps 30min
+10:00AM Common Ruby Errors 45min
+10:45AM Accounting-Driven Development 45min
+11:30AM Woah 30min
+12:00PM Lunch
+13:00PM Rails Magic 60min
+14:00PM Ruby on Rails: Why We Should Move On 60min
+15:00PM Ruby on Rails Legacy App Maintenance 60min
+16:00PM Rails for Python Developers lightning
+05:00PM Networking Event
+
+
+
+文件列表：
+/app/models/metting.rb
+/app/models/track.rb
+/lib/extract.rb
+/ext/array.rb
+/ext/fixnum.rb
+/spec
+/config/environment.rb
+
+
+
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version 2.1.2
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
